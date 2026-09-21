@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио навыков и цифровых проектов Макаровой А.В.">
+  <title>Макарова А.В. - Портфолио навыков</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312273B'/%3E%3Cpath d='M18 45V19h8l6 12 6-12h8v26h-7V31l-5 10h-4l-5-10v14z' fill='%23F6C453'/%3E%3C/svg%3E">
+  <style>
+    :root { --ink:#10243a; --blue:#176baf; --sky:#eaf5fb; --gold:#f2c14e; --paper:#f8fbfd; --muted:#607287; --line:#dbe6ee; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, Arial, sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
+    a { color:inherit; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .topline { background:var(--ink); color:#dce9f2; font-size:.8rem; letter-spacing:.07em; text-transform:uppercase; }
+    .topline .wrap { padding:11px 0; display:flex; justify-content:space-between; gap:16px; }
+    nav { background:rgba(248,251,253,.94); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+    nav .wrap { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { font-weight:800; letter-spacing:-.025em; font-size:1.05rem; text-decoration:none; }
+    .brand b { color:var(--blue); }
+    .navlinks { display:flex; gap:22px; font-size:.9rem; font-weight:650; }
+    .navlinks a { text-decoration:none; color:#41596f; }
+    .hero { background:radial-gradient(circle at 80% 12%, #256fa9 0, transparent 28%), linear-gradient(122deg,#10243a 0%,#183a58 58%,#123150 100%); color:#fff; overflow:hidden; }
+    .hero .wrap { padding:88px 0 76px; position:relative; }
+    .eyebrow { color:#f7d67a; font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; margin:0 0 15px; }
+    h1 { font-size:clamp(2.6rem,7vw,5.8rem); letter-spacing:-.065em; line-height:.94; margin:0; max-width:850px; }
+    .hero h1 span { color:#bce5fb; }
+    .lead { font-size:clamp(1.08rem,2vw,1.35rem); max-width:690px; margin:28px 0 30px; color:#d7e5ef; }
+    .pills { display:flex; flex-wrap:wrap; gap:9px; }
+    .pill { border:1px solid rgba(255,255,255,.26); border-radius:999px; padding:7px 12px; font-size:.88rem; color:#eff7fc; }
+    .section { padding:78px 0; }
+    .section-title { font-size:clamp(2rem,4vw,3.25rem); letter-spacing:-.05em; line-height:1.03; margin:0 0 14px; }
+    .section-intro { max-width:680px; margin:0 0 34px; color:var(--muted); font-size:1.05rem; }
+    .skills { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    .skill { background:#fff; border:1px solid var(--line); border-radius:20px; padding:28px; min-height:280px; display:flex; flex-direction:column; }
+    .skill .num { color:var(--blue); font-weight:800; font-size:.8rem; letter-spacing:.11em; }
+    .skill h3 { font-size:1.45rem; letter-spacing:-.035em; line-height:1.1; margin:18px 0 12px; }
+    .skill p { color:var(--muted); margin:0 0 18px; }
+    .skill ul { padding-left:19px; margin:0; color:#3e5468; font-size:.95rem; }
+    .education { background:var(--sky); }
+    .education-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
+    .proof { background:#fff; border-radius:18px; padding:13px; border:1px solid #d5e7f2; }
+    .proof img { width:100%; height:288px; object-fit:cover; object-position:center; border-radius:10px; display:block; }
+    .proof h3 { margin:15px 7px 4px; font-size:1.2rem; }
+    .proof p { color:var(--muted); margin:0 7px 15px; font-size:.9rem; }
+    .button { display:inline-flex; align-items:center; justify-content:center; background:var(--blue); color:#fff; font-weight:750; text-decoration:none; border-radius:10px; min-height:44px; padding:10px 15px; transition:.18s transform,.18s background; }
+    .button:hover { background:#0d568f; transform:translateY(-1px); }
+    .proof .button { margin:0 7px 8px; }
+    .portfolio { background:#fff; }
+    .projects { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .project { border:1px solid var(--line); border-radius:16px; padding:20px; background:#fff; display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:118px; }
+    .project h3 { margin:0 0 5px; font-size:1.06rem; letter-spacing:-.02em; }
+    .project p { margin:0; color:var(--muted); font-size:.86rem; line-height:1.35; }
+    .open { white-space:nowrap; color:var(--blue); text-decoration:none; border:1px solid #b9d9ec; padding:9px 11px; border-radius:9px; font-size:.82rem; font-weight:800; }
+    .open:hover { background:var(--sky); }
+    .offer { background:var(--ink); color:#fff; }
+    .offer .section-title { max-width:700px; }
+    .offer-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:end; }
+    .offer p { color:#c6d7e4; font-size:1.05rem; }
+    .facts { border-left:2px solid var(--gold); padding-left:22px; }
+    .fact { margin-bottom:19px; }
+    .fact b { color:#f8d878; display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:3px; }
+    footer { background:#091824; color:#a9bdcb; font-size:.83rem; }
+    footer .wrap { padding:23px 0; display:flex; justify-content:space-between; gap:20px; }
+    @media(max-width:720px) { .navlinks { display:none; } .topline .wrap, footer .wrap { flex-direction:column; gap:4px; } .hero .wrap { padding:62px 0; } .section { padding:56px 0; } .skills,.education-grid,.projects,.offer-grid { grid-template-columns:1fr; } .proof img { height:240px; } .project { align-items:flex-start; flex-direction:column; } .open { width:100%; } }
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span>Портфолио навыков</span><span>Макарова А.В. © 2026</span></div></div>
+  <nav><div class="wrap"><a class="brand" href="#top">Макарова <b>А.В.</b></a><div class="navlinks"><a href="#skills">Навыки</a><a href="#education">Обучение</a><a href="#projects">Проекты</a></div></div></nav>
+  <main id="top">
+    <section class="hero"><div class="wrap">
+      <p class="eyebrow">Возвращаюсь к работе после декрета</p>
+      <h1>Навыки в <span>финансах</span> и цифровых решениях</h1>
+      <p class="lead">Я прошла обучение по управленческому учету и вайб-кодингу. Умею разбирать финансовые задачи, собирать понятные модели и создавать простые цифровые инструменты под конкретный запрос.</p>
+      <div class="pills"><span class="pill">управленческий учет</span><span class="pill">финансовый анализ</span><span class="pill">финансовые модели</span><span class="pill">веб-инструменты</span><span class="pill">автоматизация</span></div>
+    </div></section>
+    <section class="section" id="skills"><div class="wrap">
+      <h2 class="section-title">Что я научилась делать</h2>
+      <p class="section-intro">Фокус - не на громком названии должности, а на практических навыках, которые можно применить в бизнесе.</p>
+      <div class="skills">
+        <article class="skill"><span class="num">01 / ФИНАНСЫ</span><h3>Собирать понятную финансовую картину</h3><p>Основа - управленческий учет и финансовый анализ на учебном кейсе.</p><ul><li>читать и представлять финансовую отчетность</li><li>анализировать доходы, расходы и финансовый результат</li><li>собирать расчетные модели для решений</li><li>сравнивать сценарии и оценивать риски</li></ul></article>
+        <article class="skill"><span class="num">02 / ЦИФРОВЫЕ ИНСТРУМЕНТЫ</span><h3>Создавать рабочие прототипы</h3><p>Вайб-кодинг помог освоить путь от задачи до опубликованного веб-инструмента.</p><ul><li>формулировать задачу и структуру продукта</li><li>создавать веб-страницы и калькуляторы</li><li>работать с API, вебхуками и интеграциями</li><li>публиковать и дорабатывать цифровые решения</li></ul></article>
+      </div>
+    </div></section>
+    <section class="section education" id="education"><div class="wrap">
+      <h2 class="section-title">Пройденное обучение</h2>
+      <p class="section-intro">Документы встроены в страницу: их можно открыть в полном размере по кнопке.</p>
+      <div class="education-grid">
+        <article class="proof"><img src="assets/certificate.png" alt="Сертификат Анны Макаровой по курсу Финансовый директор базовый уровень"><h3>Управленческий учет</h3><p>Курс «Финансовый директор: базовый уровень». Сертификат подтверждает аттестацию, презентацию финансовой отчетности и финансового анализа на учебном кейсе.</p><a class="button" href="assets/certificate.pdf" target="_blank" rel="noopener">Открыть сертификат PDF</a></article>
+        <article class="proof"><img src="assets/vibe-course.png" alt="Обложка программы Вайб кодинг"><h3>Вайб-кодинг</h3><p>Практическая программа по созданию веб-продуктов, финансовых моделей, API-интеграций, калькуляторов и автоматизаций.</p><a class="button" href="assets/vibe-program.pdf" target="_blank" rel="noopener">Открыть программу PDF</a></article>
+      </div>
+    </div></section>
+    <section class="section portfolio" id="projects"><div class="wrap">
+      <h2 class="section-title">Сделанные цифровые проекты</h2>
+      <p class="section-intro">Каждая кнопка открывает проект в новой вкладке.</p>
+      <div class="projects">
+        <article class="project"><div><h3>Эмоциональный Архитектор</h3><p>Сайт агентства событий и интерактивный бриф.</p></div><a class="open" href="https://feeling-forge-project.lovable.app/" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>TaxWiz</h3><p>Калькулятор налоговых режимов для ИП и ООО.</p></div><a class="open" href="https://taxwiz-calculator.lovable.app" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>FinPulse Pharma</h3><p>Демонстрационная финансовая модель и сценарии.</p></div><a class="open" href="https://codexmcpanna.github.io/finpulse-pharma/" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>Makarova Fin</h3><p>Сайт и инструмент оценки финансовых рисков.</p></div><a class="open" href="https://makarovafin.ru" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>Валютный калькулятор</h3><p>Конвертер по официальному курсу ЦБ РФ.</p></div><a class="open" href="https://currency.makarovafin.ru" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>Проверка контрагента</h3><p>Проверка организации по ИНН и факторам риска.</p></div><a class="open" href="https://checking.makarovafin.ru" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>Google Apps Script</h3><p>Проект на Google Apps Script.</p></div><a class="open" href="https://script.google.com/macros/s/AKfycbzdQ7JEU8wfD_NylYmKRMndFZDQqtqniLWzDTCSF4ABKoJUOtMk1z43ySkbGi9s01Of/exec" target="_blank" rel="noopener">Открыть ↗</a></article>
+        <article class="project"><div><h3>Mega Mover Pro</h3><p>Отдельный цифровой проект.</p></div><a class="open" href="https://mega-mover-pro.lovable.app" target="_blank" rel="noopener">Открыть ↗</a></article>
+      </div>
+    </div></section>
+    <section class="section offer"><div class="wrap offer-grid"><div><p class="eyebrow">ФОРМАТ РАБОТЫ</p><h2 class="section-title">Готова применять эти навыки в реальных задачах бизнеса</h2><p>Мне интересны задачи, где нужно навести порядок в цифрах, сделать расчет понятным и убрать ручную рутину с помощью простого цифрового решения.</p></div><div class="facts"><div class="fact"><b>График</b>3 дня в офисе, 2 дня удаленно</div><div class="fact"><b>Желаемый доход</b>250-270 тыс. руб. в месяц</div><div class="fact"><b>Авторство</b>Портфолио и материалы подготовлены Макаровой А.В.</div></div></div></section>
+  </main>
+  <footer><div class="wrap"><span>© Макарова А.В. 2026</span><span>Портфолио навыков и цифровых проектов</span></div></footer>
+</body>
+</html>
